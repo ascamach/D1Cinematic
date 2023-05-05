@@ -5,6 +5,13 @@ class test_scene extends Phaser.scene {
 
     preload() {
         this.load.path = "./assets/";
+        this.load.audio("woosh", ["woosh.mp3"]);
+    }
+
+    create() {
+        let woosh = this.sound.add("woosh");
+
+        woosh.play();
     }
 }
 
